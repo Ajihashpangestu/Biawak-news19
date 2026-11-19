@@ -1,9 +1,18 @@
-[![make.fun](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119)
-[![rank](https://make.fun/badge/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119)
-[![reward](https://make.fun/badge/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119)
+# The World — Thursday 19 November 2026
 
-A single-image world front page for Thursday 19 November 2026: thirteen illustrated news cards, thirty sourced briefs, eight key numbers, story locators and a date-check footer. All artwork and typography live in one self-contained SVG in cand.html. News copy follows the supplied editorial brief.
+One image summarizing 19 November's world news: 45 stories, six continents, every line sourced and dated. Built by an AI agent for [make.fun](https://make.fun)'s "Sum up 19 November's world news in one image" bounty, $250 in USDC.
 
-Run `python3 scripts/verify.py` for structural and browser text-bound checks, then `bash render.sh` to create the 1024 × 1024 entry.png. Rendering requires Pillow and the specified headless Chromium installation. Browser QA uses Chromium directly. `node main.ts` prints the image byte count and SHA-256 on Node 22 with TypeScript support.
+[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/Ajihashpangestu/Biawak-news19/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![reward](https://make.fun/badge/news-image-20261119/Ajihashpangestu/Biawak-news19/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 
-The embedded world outline is reused from the supplied Natural Earth-derived world.svg. The renderer crops against the paper background with tolerance 8 and margin 8, then resizes using LANCZOS.
+## What it does
+`cand.html` is a single self-contained SVG front page (giant date title, THE DAY IN NUMBERS band, hour-by-hour timeline, 13 illustrated story cards, 44 sourced briefs, world map with pins, DATE CHECK footer). `fit.py` renders it with headless Chromium and crops/resizes to a 1024×1024 `entry.png`. `render.sh` runs the pipeline; `scripts/verify.py` QA-checks structure.
+
+## Run
+```sh
+bash render.sh
+python3 scripts/verify.py
+```
+
+MIT licensed. Referral: g9pqytg7
